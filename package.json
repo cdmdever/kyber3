@@ -1,0 +1,33 @@
+{
+  "name": "kyber-crystals-wasm",
+  "version": "1.0.0",
+  "description": "ML-KEM (Kyber) post-quantum cryptography implementation for Node.js and browser",
+  "main": "install/kyber_crystals_wasm_engine.js",
+  "browser": "install/kyber_crystals_wasm_engine.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "install/kyber_crystals_wasm_engine.js",
+    "install/kyber_crystals_wasm_engine.wasm"
+  ],
+  "scripts": {
+    "build": "npm run build:wasm && npm run build:js",
+    "build:wasm": "cmake --build build --target install",
+    "build:js": "tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "kyber",
+    "ml-kem",
+    "post-quantum",
+    "cryptography",
+    "wasm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  }
+} 
